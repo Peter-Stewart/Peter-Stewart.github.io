@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Peter S. Stewart"
-  avatar : "https://github.com/Peter-Stewart/Peter-Stewart.github.io/blob/306506b4ec60b311dca542c66fdbe0fe904b677b/assets/images/bio-pic-web.jpg"
+  avatar : "/assets/images/bio-pic-web.jpg"
   bio    : "PhD Student in the Conservation Ecology Group, Durham University"
   links:
     - label: "Twitter"
@@ -66,6 +66,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Peter-Stewart"
+
+header:
+  image: /assets/images/header_resized.jpg
 
 footer:
   links:
