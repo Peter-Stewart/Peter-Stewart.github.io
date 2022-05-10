@@ -8,9 +8,9 @@ header:
   actions:
     - label: "Publications"
       url: "https://peter-stewart.github.io/publications/"
-excerpt: "Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop."
+excerpt: "PhD Student: Ecology and Conservation"
 intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  - excerpt: 'I am an **ecologist and conservationist** interested in the interface between ecology, animal behaviour, and the human dimensions of conservation. I am currently undertaking my PhD with the Conservation Ecology Group at Durham University, on the **impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya.**'
 feature_row:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/281b2de6-e411-4a1e-abf2-769196aff5ba.jpeg
     alt: ""
@@ -35,4 +35,5 @@ feature_row:
     btn_label: ""      
 ---
 
+{% include feature_row id="intro" type="center" %}
 {% include feature_row %}
