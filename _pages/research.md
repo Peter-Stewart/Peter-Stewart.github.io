@@ -3,6 +3,4 @@ permalink: /research/
 title: "Research"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
-
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+My interests mostly lie at the interface between ecology, animal behaviour, and the human dimensions of conservation. Specific topics of interest include the ecological consequences of behavioural changes induced by the presence of other species, such as invasive species or predators, the importance of individual behaviour for ecosystem-level patterns, causal inference in ecological modelling, and the processes by which conservation decisions are made. 
