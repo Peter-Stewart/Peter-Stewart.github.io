@@ -60,6 +60,9 @@ author:
   avatar : "/assets/images/bio-pic-web.jpg"
   bio    : "PhD Student in the Conservation Ecology Group, Durham University"
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:peter.s.stewart@durham.ac.uk"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/Peter_S_Stewart"
