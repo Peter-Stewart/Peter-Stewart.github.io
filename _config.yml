@@ -57,8 +57,8 @@ plugins:
 
 author:
   name   : "Peter S. Stewart"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "PhD Student with the Conservation Ecology Group, Durham University"
+  avatar : "/assets/images/bio-photo.jpeg"
+  bio    : "PhD Student in the Conservation Ecology Group, Durham University"
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
