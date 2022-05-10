@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 hidden: true
 header:
-  overlay_color: "#5e616c"
+  overlay_filter: linear-gradient(#09C6DD,#2CA702)
   overlay_image: /assets/images/header_resized.jpg
   actions:
     - label: "Publications"
