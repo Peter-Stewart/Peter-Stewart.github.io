@@ -13,7 +13,7 @@ In this post I walk through an occupancy model which uses a Gaussian process to 
 
 # Acknowledgements and other resources
 
-I used several resources when writing this post. In particular, the majority of my knowledge about Bayesian statistics, Stan, and Gaussian processes comes from Richard McElreath's fantastic book and lecture series *Statistical Rethinking*. The whole course is available for free online, I highly recommend you [check out the most recent version here]([GitHub - rmcelreath/stat_rethinking_2022: Statistical Rethinking course winter 2022](https://github.com/rmcelreath/stat_rethinking_2022)). I also learned a lot about Stan from Michael Betancourt's excellent case studies, in particular the [introduction to Stan]([An Introduction to Stan](https://betanalpha.github.io/assets/case_studies/stan_intro.html)). I learned about how to marginalise out the discrete occupancy state parameters from Maxwell B. Joseph's [tutorial]([Maxwell B. Joseph: A step-by-step guide to marginalizing over discrete parameters for ecologists using Stan](https://mbjoseph.github.io/posts/2020-04-28-a-step-by-step-guide-to-marginalizing-over-discrete-parameters-for-ecologists-using-stan/)), and the supplement of [this paper]([Efficient Bayesian analysis of occupancy models with logit link functions - Clark - 2019 - Ecology and Evolution - Wiley Online Library](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4850)) by Allan Clark and Res Altwegg - my understanding mainly comes from the former, my code from the latter. Some of the other key resources which I used to learn about about occupancy models are the [classic book]([Occupancy Estimation and Modeling - 1st Edition](https://www.elsevier.com/books/occupancy-estimation-and-modeling/mackenzie/978-0-12-088766-8)) by MacKenzie *et al.* and [this paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192819) by Joe Northrup and Brian Gerber. I'd also like to thank the Conservation Ecology Group at Durham University, as this post was inspired by a talk I gave at one of their lab group meetings a few months ago.
+I used several resources when writing this post. In particular, the majority of my knowledge about Bayesian statistics, Stan, and Gaussian processes comes from Richard McElreath's fantastic book and lecture series *Statistical Rethinking*. The whole course is available for free online, I highly recommend you [check out the most recent version here](https://github.com/rmcelreath/stat_rethinking_2022). I also learned a lot about Stan from Michael Betancourt's excellent case studies, in particular the [introduction to Stan](https://betanalpha.github.io/assets/case_studies/stan_intro.html). I learned about how to marginalise out the discrete occupancy state parameters from Maxwell B. Joseph's [tutorial]([Maxwell B. Joseph: A step-by-step guide to marginalizing over discrete parameters for ecologists using Stan](https://mbjoseph.github.io/posts/2020-04-28-a-step-by-step-guide-to-marginalizing-over-discrete-parameters-for-ecologists-using-stan/)), and the supplement of [this paper](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4850) by Allan Clark and Res Altwegg - my understanding mainly comes from the former, my code from the latter. Some of the other key resources which I used to learn about about occupancy models are the [classic book](https://www.elsevier.com/books/occupancy-estimation-and-modeling/mackenzie/978-0-12-088766-8) by MacKenzie *et al.* and [this paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192819) by Joe Northrup and Brian Gerber. I'd also like to thank the Conservation Ecology Group at Durham University, as this post was inspired by a talk I gave at one of their lab group meetings a few months ago.
 
 # An important note
 
@@ -363,7 +363,7 @@ I'll start by showing the Stan model in full. Don't worry if it looks like a lot
 
 Here is the full model:
 
-```Stan
+```stan
 functions{
     matrix cov_GPL2(matrix x, real sq_alpha, real sq_rho, real delta) {
         int N = dims(x)[1];
@@ -568,7 +568,7 @@ transformed parameters{
 
 Now we're into some of the real action! We start off the transformed parameter blocks by defining a vector and array to hold the values for the occupancy probability $\psi_{i}$ for each site $i$ and the detection probability $p_{i,j}$ for each site $i$ at each survey $j$ respectively. 
 
-We then move onto a section which performs the Gaussian process part of the model, using the `cov_GPL2` function we defined in the functions block. This section also uses a computational trick called **non-centred parameterisation** to make the model run better. I'm not going to go over the theory behind how this works here, but you can find out all about it in the Statistical Rethinking lectures [here]([Statistical Rethinking 2022 Lecture 13 - Multi-Multilevel Models - YouTube](https://youtu.be/n2aJYtuGu54?t=2318)) and [here]([Statistical Rethinking 2022 Lecture 14 - Correlated Varying Effects - YouTube](https://youtu.be/XDoAglqd7ss?t=2307)) as well as in the book. 
+We then move onto a section which performs the Gaussian process part of the model, using the `cov_GPL2` function we defined in the functions block. This section also uses a computational trick called **non-centred parameterisation** to make the model run better. I'm not going to go over the theory behind how this works here, but you can find out all about it in the Statistical Rethinking lectures [here](https://youtu.be/n2aJYtuGu54?t=2318) and [here](https://youtu.be/XDoAglqd7ss?t=2307) as well as in the book. 
 
 We first make some vectors and matrices to hold the Cholesky-decomposed covariance matrix `L_SIGMA` (for the non-centred parameterisation) as well as the regular old covariance matrix and intercepts for each site that we covered above. After this, we run the `cov_GPL2` function, perform the Cholesky decomposition, and then multiply the resulting matrix `L_SIGMA`by the `z` scores we saw in the parameters block to obtain our intercept terms `k`. 
 
@@ -654,7 +654,7 @@ traceplot(m1_nc, pars=c("betax","betam","alphadet","betadet","k_bar","etasq","rh
 
 ![](assets/images/post_images/spatial_occupancy/traceplot.jpeg)
 
-These ones look like "fuzzy caterpillars", [which is good]([Statistical Rethinking 2022 Lecture 08 - Markov chain Monte Carlo - YouTube](https://youtu.be/Qqz5AJjyugM?t=3050)). 
+These ones look like "fuzzy caterpillars", [which is good](https://youtu.be/Qqz5AJjyugM?t=3050). 
 
 Now that we're happy that our model has performed adequately, we can extract our samples from the posterior distribution:
 
@@ -777,7 +777,7 @@ We see that our model has done a great job here - the two plots looks pretty sim
 
 The effect of intervening in the system (i.e., changing the value of $X$) on the occupancy probability is often different to the effect size for the covariate of interest (i.e., $\beta_{X}$). This is because when there are extreme values for other covariates the occupancy probabilty can get pushed close to zero or one, making the effect of our focal covariate less important - this is a **floor/ceiling effect**.
 
-The consequence is that if we're interested in understanding the consequences of changing $X$, then we have to consider how the other variables which effect occupancy (in this case, $M$) are distributed. [One way of dealing with this challenge is by using a simulation]([Statistical Rethinking 2022 Lecture 13 - Multi-Multilevel Models - YouTube](https://youtu.be/n2aJYtuGu54?t=1740)). 
+The consequence is that if we're interested in understanding the consequences of changing $X$, then we have to consider how the other variables which effect occupancy (in this case, $M$) are distributed. [One way of dealing with this challenge is by using a simulation](https://youtu.be/n2aJYtuGu54?t=1740). 
 
 The exact code for our simulation depends on whether we're interested in simulating an intervention for the specific sites that we surveyed, or for the (hypothetical) population of all sites. We'll start with the specific sites we surveyed:
 
