@@ -15,13 +15,13 @@ intro:
     <br /><br />
     I am currently undertaking my PhD with the Conservation Ecology Group at Durham University, on the **impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya.** As part of this project I manage [Prickly Pear Project Kenya](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya) on Zooniverse.'
 feature_row:
-  - image_path: https://panoptes-uploads.zooniverse.org/subject_location/281b2de6-e411-4a1e-abf2-769196aff5ba.jpeg
+  - image_path: /assets/images/cactus_for_scale.jpg
     alt: ""
     
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/ba9a0154-92b3-4c36-bf38-80ecba06731d.jpeg
     alt: ""
     
-  - image_path: https://panoptes-uploads.zooniverse.org/subject_location/7695b37f-1bcb-4032-a553-df8bcb04a32b.jpeg
+  - image_path: /assets/images/hogweed_trailcam.jpg
     alt: "" 
 ---
 {% include feature_row id="intro" type="left" %}
