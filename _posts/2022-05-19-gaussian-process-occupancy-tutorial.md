@@ -201,7 +201,7 @@ Note that we're ignoring $\bar{k}$ here and making the mean in `mvnorm` zero, wh
 
 Now we're going to add two covariates for the occupancy probability: $X$, which is our focal variable (i.e., we're interested in the effect of $X$ on $\psi$ ) and $M$, which is a confounding variable. We will assume that the variables are related as shown in this DAG:
 
-<img src="file:///C:/Users/PeteS/OneDrive/R%20Scripts%20Library/Blog/Spatial_occupancy_tutorial/dag1.jpg" title="" alt="" data-align="center">
+![](/assets/images/post_images/spatial_occupancy/dag1.jpg)
 
 The consequence is that if we want to estimate the effect of $X$ on $\psi$, we need to condition on $M$ in our occupancy sub-model. We will also include a covariate $W_{t}$ for the detection probability. We're giving this covariate the subscript $t$ because it is time-varying, meaning that it has a different value for each survey of the site. 
 
@@ -683,7 +683,7 @@ dens(post$etasq, main="eta^2"); abline(v=eta2, lty=2)
 dens(post$rhosq, main="rho^2"); abline(v=rho2, lty=2)
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\key_parameters.jpg)
+![](/assets/images/post_images/spatial_occupancy/key_parameters.jpg)
 
 As you can see, in this example the model estimated all of the key parameters pretty accurately - the dashed vertical lines all fall somewhere within the posterior distribution for each parameter. 
 
