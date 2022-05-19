@@ -9,8 +9,6 @@ tags:
   - occupancy modelling
 ---
 
-# An occupancy model with a Gaussian process for spatial autocorrelation in Stan
-
 In this post I walk through an occupancy model which uses a Gaussian process to model spatial autocorrelation. The model is coded in Stan. I start off with a brief overview of occupancy models and Gaussian process regression. I then walk through how to simulate a dataset from the assumed data-generating process in R, and then explain the model and Stan code step-by-step. Finally, I look at some of the interesting things we can do once we have the posterior distribution. 
 
 # Acknowledgements and other resources
