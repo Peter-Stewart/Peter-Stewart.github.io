@@ -363,7 +363,7 @@ I'll start by showing the Stan model in full. Don't worry if it looks like a lot
 
 Here is the full model:
 
-```stan
+```r
 functions{
     matrix cov_GPL2(matrix x, real sq_alpha, real sq_rho, real delta) {
         int N = dims(x)[1];
@@ -472,7 +472,7 @@ Now let's break it down, starting from the top.
 
 ## The functions block
 
-```stan
+```r
 functions{
     matrix cov_GPL2(matrix x, real sq_alpha, real sq_rho, real delta) {
         int N = dims(x)[1];
@@ -492,7 +492,7 @@ functions{
 
 This block, which I adapted from Statistical Rethinking, codes the kernel function $K_{i,j} = \eta^2exp(-\rho^2D^2_{i,j})$. You can customise the function by changing the line:
 
-```stan
+```r
        K[i, j] = sq_alpha * exp(-sq_rho * square(x[i,j]) );
 ```
 
@@ -500,7 +500,7 @@ The function also allows for a parameter called `delta` which I've chosen to ign
 
 ## The data block
 
-```stan
+```r
 data{
   int<lower=1> nsites; // Number of sites
   int<lower=1> N_maxvisits; // Maximum number of survey visits received by a site
@@ -519,7 +519,7 @@ This block just tells Stan about the data which we supplied in `dlist` above. Ha
 
 ## The parameters block
 
-```stan
+```r
 parameters{
   // Effect sizes (on log-odds scale)
   real betax; // Occupancy slope (effect of x)
@@ -539,7 +539,7 @@ This block tells Stan about the model's parameters, specifically the intercepts 
 
 ## The transformed parameters block
 
-```stan
+```r
 transformed parameters{
   vector[nsites] psi; // Probability of occurrence at each site i
   array[nsites, N_maxvisits] real pij; // Probability of detection at each site i at each time j
@@ -576,7 +576,7 @@ In the final section, we calculate $\psi_{i}$ and $p_{i,j}$, looping over each s
 
 ## The model block
 
-```stan
+```r
 model{
 
   vector[nsites] log_psi; // Log of psi
