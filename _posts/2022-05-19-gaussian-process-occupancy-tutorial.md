@@ -33,7 +33,7 @@ $$
 
 We assume that a site stays in one state (occupied or not) for the duration of the study, i.e. that there is a *single season*. You can also get multi-season or dynamic occupancy models which assume that the state may change, but I'm not going to cover those here.
 
-We're often interested in modelling $\psi$ as a function of one or more covariates, for instance because we want to know the effect of some environmental variable on occupancy. It's important to note that it is very important to consider the purpose of the model (inference or prediction) when deciding on which covariates to put in the model - this is covered by [my recent preprint]([Model Selection in Occupancy Models: Inference versus Prediction | bioRxiv](https://www.biorxiv.org/content/10.1101/2022.03.01.482466v2)). We can add covariates in a standard logistic regression format, for example for a single covariate $X$:
+We're often interested in modelling $\psi$ as a function of one or more covariates, for instance because we want to know the effect of some environmental variable on occupancy. It's important to note that it is very important to consider the purpose of the model (inference or prediction) when deciding on which covariates to put in the model - this is covered by [my recent preprint](https://www.biorxiv.org/content/10.1101/2022.03.01.482466v2). We can add covariates in a standard logistic regression format, for example for a single covariate $X$:
 
 $$
 logit(\psi_{i}) = ln(\frac{\psi}{1-\psi}) = \alpha + \beta_{X}X_{i}
@@ -77,7 +77,7 @@ The occupancy model above assumes that the occupancy probability of our sites is
 
 There are a variety of ways that we could include this spatial autocorrelation in our model. One really cool way is to use **Gaussian process regression.** 
 
-The theory behind Gaussian process regression is already covered by [Statistical Rethinking]([Statistical Rethinking 2022 Lecture 16 - Gaussian Processes - YouTube](https://www.youtube.com/watch?v=PIuqxOBJqLU&ab_channel=RichardMcElreath)), as well as [this case study](https://betanalpha.github.io/assets/case_studies/gaussian_processes.html) and the [Stan Users' guide]([10.1 Gaussian process regression | Stan User’s Guide](https://mc-stan.org/docs/2_29/stan-users-guide/gaussian-process-regression.html)). For this reason, I'm just going to give a quick overview here so that our extensions to the occupancy model make sense. 
+The theory behind Gaussian process regression is already covered by [Statistical Rethinking](https://www.youtube.com/watch?v=PIuqxOBJqLU&ab_channel=RichardMcElreath), as well as [this case study](https://betanalpha.github.io/assets/case_studies/gaussian_processes.html) and the [Stan Users' guide](https://mc-stan.org/docs/2_29/stan-users-guide/gaussian-process-regression.html). For this reason, I'm just going to give a quick overview here so that our extensions to the occupancy model make sense. 
 
 Remember that the essential idea is that **sites which are closer tend to be more similar**. A natural way to express this idea is by having a function to link the covariance between a pair of sites (we'll index these $i$ and $j$) to the distance between them. This function is usually called a **kernel function**, and one example is:
 
@@ -363,7 +363,7 @@ I'll start by showing the Stan model in full. Don't worry if it looks like a lot
 
 Here is the full model:
 
-```stan
+```Stan
 functions{
     matrix cov_GPL2(matrix x, real sq_alpha, real sq_rho, real delta) {
         int N = dims(x)[1];
