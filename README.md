@@ -21,7 +21,7 @@ feature_row:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/ba9a0154-92b3-4c36-bf38-80ecba06731d.jpeg
     alt: ""
     
-  - image_path: /assets/images/hogweed_trailcam.jpg
+  - image_path: /assets/images/hogweed_trailcam3.jpg
     alt: "" 
 ---
 {% include feature_row id="intro" type="left" %}
