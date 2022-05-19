@@ -14,7 +14,7 @@ intro:
     excerpt: 'I am an **ecologist and conservationist** interested in the interface between ecology, animal behaviour, and the human dimensions of conservation. 
     <br /><br />
     I am currently undertaking my PhD with the Conservation Ecology Group at Durham University, on the **impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya.** As part of this project I manage [Prickly Pear Project Kenya](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya) on Zooniverse.'
-feature_row:
+feature_row1:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/872ae3c1-6824-4328-a199-9fab69aeb9dd.jpeg
     alt: ""
     
@@ -24,7 +24,7 @@ feature_row:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/281b2de6-e411-4a1e-abf2-769196aff5ba.jpeg
     alt: "" 
     
-feature_row:
+feature_row2:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/4d722a30-327f-404e-addc-f431cc280527.jpeg
     alt: ""
     
@@ -34,7 +34,7 @@ feature_row:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/1939ab56-241d-4120-8dce-f7462cef51be.jpeg
     alt: "" 
     
-feature_row:
+feature_row3:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/48d8404a-dac9-4f1b-8d65-af0238dc2fca.jpeg
     alt: ""
     
@@ -45,6 +45,6 @@ feature_row:
     alt: "" 
 ---
 {% include feature_row id="intro" type="left" %}
-{% include feature_row %}
-{% include feature_row %}
-{% include feature_row %}
+{% include feature_row1 %}
+{% include feature_row2 %}
+{% include feature_row3 %}
