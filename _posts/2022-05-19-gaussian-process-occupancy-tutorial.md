@@ -27,9 +27,9 @@ Occupancy models are used to study the patterns and drivers of species occurrenc
 
 Imagine that we have a bunch of sites dotted about the landscape. The state ($z$) of a site (indexed $i$) is either occupied (1) or unoccupied (0), and the probability that it is occupied is called the **occupancy probability ($\psi$)**. We can write this as:
 
-$$
+```math
 z_{i} \sim Bernoulli(\psi_{i})
-$$
+```
 
 We assume that a site stays in one state (occupied or not) for the duration of the study, i.e. that there is a *single season*. You can also get multi-season or dynamic occupancy models which assume that the state may change, but I'm not going to cover those here.
 
