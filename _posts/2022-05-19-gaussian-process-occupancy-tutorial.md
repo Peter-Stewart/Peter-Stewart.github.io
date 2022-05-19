@@ -1,3 +1,14 @@
+---
+title: "An occupancy model with a Gaussian process for spatial autocorrelation in Stan"
+date: 2022-05-19
+categories:
+  - blog
+tags:
+  - Stan
+  - tutorial
+  - occupancy modelling
+---
+
 # An occupancy model with a Gaussian process for spatial autocorrelation in Stan
 
 In this post I walk through an occupancy model which uses a Gaussian process to model spatial autocorrelation. The model is coded in Stan. I start off with a brief overview of occupancy models and Gaussian process regression. I then walk through how to simulate a dataset from the assumed data-generating process in R, and then explain the model and Stan code step-by-step. Finally, I look at some of the interesting things we can do once we have the posterior distribution. 
@@ -173,7 +184,7 @@ dens(as.vector(dmat), xlab="Distance") # Visualise the distances between sites a
 par(mfrow=c(1,1))
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\cov_distance.jpeg)
+![](assets/images/post_images/spatial_occupancy/cov_distance.jpeg)
 
 You can use this code to play around with the $\eta^2$ and $\rho^2$ values to see how they affect the way that covariance declines with distance.
 
@@ -304,11 +315,11 @@ for ( i in 1:N ) curve(inv_logit( alpha[i] + beta[i]*(x)) ,
                         col=col.alpha("black",0.2) )
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\flat_priors.jpeg)
+![](assets/images/post_images/spatial_occupancy/flat_priors.jpeg)
 
 As we can see, something has gone badly wrong - nearly all of the prior probability is piled up on zero and one! The reason is that our priors are too flat. Remember that our priors are on the log-odds scale, and they will be turned into probability through the $logit$ link function. Because values below -4 and above 4 on the log-odds scale correspond to probabilities very close to 0 and 1 respectively, assigning a lot of our prior probability to these values by choosing a flat prior with a lot of area here makes the model assign a lot of prior probability to extreme values. Northrup and Gerber discuss this phenomenon in more detail in [their paper]([A comment on priors for Bayesian occupancy models | PLOS ONE](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192819)), and offer recommendations for better priors. We're going to try some tighter priors instead: $Normal(0,0.5)$ for $\alpha_{det}$ and $Normal(0,1)$ for $\beta_{W}$. If you modfy the code above to these values, then you get this plot:
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\better_priors.jpeg)
+![](assets/images/post_images/spatial_occupancy/better_priors.jpeg)
 
 This looks much more sensible. We are also going to learn from this experience by choosing relatively tight priors for $\bar{k}$ and our $\beta$ values in the occupancy submodel: I'm going to suggest $Normal(0,0.2)$ and $Normal(0,1)$ respectively. 
 
@@ -340,7 +351,7 @@ shade(priorcov_60CI, x_seq)
 shade(priorcov_50CI, x_seq)
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\gp_priors.jpeg)
+![](assets/images/post_images/spatial_occupancy/gp_priors.jpeg)
 
 We can see that according to our priors, covariance will decline with distance, and will probably be low by the time that sites are 3 units apart - in a real dataset, we'd want to think about the distances between our sites and the scale that we'd expect autocorrelation to occur at when deciding whether these values are sensible. Our priors also assign more probability to smaller covariance values at each distance - they will be weakly regularising, meaning they are skeptical of more extreme values. However, they do allow for higher values if the data demand it.
 
@@ -633,9 +644,9 @@ precis(m1_nc)
 dashboard(m1_nc)
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\precis.jpg)
+![](assets/images/post_images/spatial_occupancy/precis.jpg)
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\dashboard.jpeg)
+![](assets/images/post_images/spatial_occupancy/dashboard.jpeg)
 
 We're particularly interested in the effective sample size `n_eff`which should be some healthy number relative to our actual number of samples, the Gelman-Rubin convergence diagnostic `Rhat` which should be 1 for each parameter, and the number of divergent transitions which should ideally be zero. We should also inspect the traceplots for the key parameters here:
 
@@ -643,7 +654,7 @@ We're particularly interested in the effective sample size `n_eff`which should b
 traceplot(m1_nc, pars=c("betax","betam","alphadet","betadet","k_bar","etasq","rhosq"))
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\traceplot.jpeg)
+![](assets/images/post_images/spatial_occupancy/traceplot.jpeg)
 
 These ones look like "fuzzy caterpillars", [which is good]([Statistical Rethinking 2022 Lecture 08 - Markov chain Monte Carlo - YouTube](https://youtu.be/Qqz5AJjyugM?t=3050)). 
 
@@ -697,7 +708,7 @@ for(i in 1:length(psi)){
 }
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\psi.jpeg)
+![](assets/images/post_images/spatial_occupancy/psi.jpeg)
 
 As we can see, the inferences are not too bad, with many of the points lying close to the diagonal line where the model's estimate is equal to the true value.
 
@@ -736,7 +747,7 @@ for(i in 1:sites){
 }
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\autocorrelation_inferred.jpeg)
+![](assets/images/post_images/spatial_occupancy/autocorrelation_inferred.jpeg)
 
 Again, because we simulated the data we are able to compare our model's results against the truth: 
 
@@ -760,7 +771,7 @@ for(i in 1:sites){
 }
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\autocorrelation_true.jpeg)
+![](assets/images/post_images/spatial_occupancy/autocorrelation_true.jpeg)
 
 We see that our model has done a great job here - the two plots looks pretty similar! 
 
@@ -803,7 +814,7 @@ dens(Sdiff)
 abline(v=inv_logit(betax)-inv_logit(0), lty=2) # true betax
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\intervention_sim1.jpeg)
+![](assets/images/post_images/spatial_occupancy/intervention_sim1.jpeg)
 
 Looking at this distribution, we can see that there is a fair amount of uncertainty in what will happen to $\psi$ when we increase $X$ by 1, but the model is pretty sure that the effect of the intervention will be to increase $\psi$. The peak of our distribution is at around  0.23, which is what we'd expect from our $\beta_{X}$ parameter (as when $\bar{k}$ is 0, the true effect of $X$ is an increase $\psi$ from 0 to 1 on the log-odds scale, which is an increase from 0.5 to 0.73 on the probabilty scale, i.e. an increase of 0.23 - I've shown this value with a dashed vertical line).
 
@@ -844,7 +855,7 @@ dens(Sdiff)
 abline(v=inv_logit(betax)-inv_logit(0), lty=2)
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\intervention_sim2.jpeg)
+![](assets/images/post_images/spatial_occupancy/intervention_sim2.jpeg)
 
 Now we can really see the ceiling and floor effects - in a large proportion of sites, changing $X$ had almost no effect on $\psi$, even though $\beta_{X}$ is strongly positive! Since $k_{i}$ is out of the picture now, this is all down to $M$ - we can see this if we plot the change in $\psi$ against $M$ like so:
 
@@ -858,6 +869,6 @@ ate <- mean(Sdiff) # Average treatment effect
 abline(h=ate,lwd=2)
 ```
 
-![](C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Spatial_occupancy_tutorial\intervention_sim3.jpeg)
+![](assets/images/post_images/spatial_occupancy/intervention_sim3.jpeg)
 
 We can see here that when $M$ (`m_sim`) is high, the change in $\psi$ tends to be closer to zero. 
