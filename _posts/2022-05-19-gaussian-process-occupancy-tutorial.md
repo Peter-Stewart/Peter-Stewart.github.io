@@ -98,10 +98,10 @@ Notice that what we've done is replace the intercept ($\alpha$) from the model w
 $$
 \begin{pmatrix}k_{1} \\ k_{2} \\ \vdots \\ k_{i} \end{pmatrix} 
 \sim
-MVNormal\left(\begin{pmatrix}0\\0\\0\\0\end{pmatrix}, \bold{K}\right)
+MVNormal\left(\begin{pmatrix}0\\0\\0\\0\end{pmatrix}, \textbf{K}\right)
 $$
 
-You can see the covariance matrix $\bold{K}$ formed from all of the combinations of $K{i,j}$ on the right. The mean of the multivariate normal distribution is filled with zeroes because we already have $\bar{k}$ in the model above. 
+You can see the covariance matrix $\textbf{K}$ formed from all of the combinations of $K{i,j}$ on the right. The mean of the multivariate normal distribution is filled with zeroes because we already have $\bar{k}$ in the model above. 
 
 The only thing left to do is add some priors for the new parameters - with the priors included, the whole model looks like:
 
@@ -112,7 +112,7 @@ z_{i} \sim Bernoulli(\psi_{i}) \\
 logit(\psi_{i}) = ln(\frac{\psi}{1-\psi}) = \bar{k} + k_{i} + \beta_{X}X_{i} \\
 \begin{pmatrix}k_{1} \\ k_{2} \\ \vdots \\ k_{i} \end{pmatrix} 
 \sim
-MVNormal\left(\begin{pmatrix}0\\0\\0\\0\end{pmatrix}, \bold{K}\right) \\
+MVNormal\left(\begin{pmatrix}0\\0\\0\\0\end{pmatrix}, \textbf{K}\right) \\
 K_{i,j} = \eta^2exp(-\rho^2D^2_{i,j}) \\
 logit(p_{i}) = ln(\frac{p}{1-p}) = \alpha_{det} + \beta_{W}W_{i} \\
 \beta_{X},  \beta_{W} \sim Normal(0,1) \\
