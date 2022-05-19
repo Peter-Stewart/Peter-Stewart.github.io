@@ -3,6 +3,7 @@ layout: splash
 permalink: /
 hidden: true
 header:
+  overlay_filter: linear-gradient(rgba(16, 222, 88, 0.4), rgba(15, 196, 219, 0.4))
   overlay_image: /assets/images/header_resized.jpg
   actions:
     - label: "Publications"
