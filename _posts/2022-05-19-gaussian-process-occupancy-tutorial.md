@@ -7,6 +7,13 @@ tags:
   - Stan
   - tutorial
   - occupancy modelling
+  
+ <!-- Load jquery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+ <!-- Load KaTeX -->
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+ <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
 ---
 
 In this post I walk through an occupancy model which uses a Gaussian process to model spatial autocorrelation. The model is coded in Stan. I start off with a brief overview of occupancy models and Gaussian process regression. I then walk through how to simulate a dataset from the assumed data-generating process in R, and then explain the model and Stan code step-by-step. Finally, I look at some of the interesting things we can do once we have the posterior distribution. 
@@ -870,3 +877,21 @@ abline(h=ate,lwd=2)
 ![](assets/images/post_images/spatial_occupancy/intervention_sim3.jpeg)
 
 We can see here that when $M$ (`m_sim`) is high, the change in $\psi$ tends to be closer to zero. 
+```
+ <footer>
+     <!-- Parse the Latex divs with Katex-->
+     <script type="text/javascript">
+         $("script[type='math/tex']").replaceWith(
+             function(){
+                 var tex = $(this).text();
+                 return katex.renderToString(tex, {displayMode: false});
+         });
+
+         $("script[type='math/tex; mode=display']").replaceWith(
+             function(){
+                 var tex = $(this).text();
+                 return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+         });
+     </script>
+ </footer>
+ ```
