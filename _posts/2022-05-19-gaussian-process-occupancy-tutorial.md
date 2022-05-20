@@ -621,7 +621,7 @@ In the next section, we want to compute the likelihood, which will become part o
 
 # Running the model and exploring the output
 
-Now that we've written the model, it's time to run it! To do this, I use CmdStan via the `cstan` function in the `rethinking` package: 
+Now that we've written the model, it's time to run it! To do this, I use CmdStan via the `cstan` function in the `rethinking` package. First save the model as a `.stan` file (I called mine `occ_gp_nc.stan`) and then run the model like this: 
 
 ```r
 m1_nc <- cstan(file = "C:/Stan_code/occupancy_models/occ_gp_nc.stan",
