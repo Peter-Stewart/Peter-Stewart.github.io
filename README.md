@@ -18,7 +18,7 @@ feature_row1:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/872ae3c1-6824-4328-a199-9fab69aeb9dd.jpeg
     alt: ""
     
-  - image_path: https://panoptes-uploads.zooniverse.org/subject_location/ba9a0154-92b3-4c36-bf38-80ecba06731d.jpeg
+  - image_path: https://panoptes-uploads.zooniverse.org/subject_location/1939ab56-241d-4120-8dce-f7462cef51be.jpeg
     alt: ""
     
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/281b2de6-e411-4a1e-abf2-769196aff5ba.jpeg
@@ -31,7 +31,7 @@ feature_row2:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/15110af4-ffc1-4855-97c2-59176b338a29.jpeg
     alt: ""
     
-  - image_path: https://panoptes-uploads.zooniverse.org/subject_location/1939ab56-241d-4120-8dce-f7462cef51be.jpeg
+  - image_path: https://panoptes-uploads.zooniverse.org/subject_location/c2a2cac4-6f83-4e9d-aa8e-07a1d0d98513.jpeg
     alt: "" 
     
 feature_row3:
