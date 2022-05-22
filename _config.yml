@@ -88,7 +88,7 @@ footer:
 comments:
   provider: "disqus"
   disqus:
-    shortname: "peter-stewart.github.io"
+    shortname: "https-peter-stewart-github-io"
 
 defaults:
   # _posts
