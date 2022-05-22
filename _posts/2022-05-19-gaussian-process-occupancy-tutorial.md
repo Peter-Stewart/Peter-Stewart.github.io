@@ -689,7 +689,7 @@ As you can see, in this example the model estimated all of the key parameters pr
 
 There's a fair bit of uncertainty, but the model is still pretty good at identifying whether the effect size parameters are positive or negative - this is particularly important for `betax`, which is our effect of interest in this example.  
 
-### Looking at the occupancy probability
+## Looking at the occupancy probability
 
 We can also look at the model's predictions of the occupancy probability at each site ($\psi_{i}$). Again, because we simulated the data we can compare this against the true value. Here I do this by plotting the posterior mean and 89% compatability intervals against the true value:
 
@@ -710,7 +710,7 @@ for(i in 1:length(psi)){
 
 As we can see, the inferences are not too bad, with many of the points lying close to the diagonal line where the model's estimate is equal to the true value.
 
-### Visualising the spatial autocorrelation
+## Visualising the spatial autocorrelation
 
 One of the really cool things we can do is visualise the spatial autocorrelation between sites. The first thing we need to do here is to compute the posterior median covariance among sites (i.e., the most probable covariance matrix according to the model) and convert it into a correlation matrix:
 
