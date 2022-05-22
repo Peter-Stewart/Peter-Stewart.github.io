@@ -85,6 +85,11 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Peter-Stewart"
 
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "peter-stewart.github.io"
+
 defaults:
   # _posts
   - scope:
