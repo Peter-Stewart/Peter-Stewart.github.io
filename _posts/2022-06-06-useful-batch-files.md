@@ -39,7 +39,7 @@ This will append all of our images with the prefix `Site_18_part2_`. To change t
 
 To make this run, we have to create a `.bat` file in the folder which contains the camera trap images. **This file is going to rename every .jpg in the folder by adding the site prefix, so make sure that you move any images you don't want renamed to a separate folder!**
 
-The first step is to create a `.txt` file in our folder. To do this, right click > New > Text Document. Name it something sensible - apparently it is important to avoid calling your batch file the same thing as other common batch files which may exist on your computer. In this example I've called my file`Prefix_camera_images.bat`
+The first step is to create a `.txt` file in our folder. To do this, right click > New > Text Document. Name it something sensible - apparently it is important to avoid calling your batch file the same thing as other common batch files which may exist on your computer. In this example I've called my file `prefix_camera_images.bat`
 
 We then paste the code above into this `.txt` file, and save it.
 
