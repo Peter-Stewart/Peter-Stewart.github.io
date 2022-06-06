@@ -45,15 +45,15 @@ We then paste the code above into this `.txt` file, and save it.
 
 We then need to turn our `.txt` file into a batch file. We can do this by using save as - we need to select "All files" in the drop-down menu, and type `.bat` at the end of the file name:
 
-![](assets/images/post_images/useful_batch_files/save_as.jpg)
+![](/assets/images/post_images/useful_batch_files/save_as.jpg)
 
 Then we save the file. You'll see that the batch file has now appeared in the folder with our camera trap images:
 
-![](assets/images/post_images/useful_batch_files/prefix_before.jpg)
+![](/assets/images/post_images/useful_batch_files/prefix_before.jpg)
 
 Double-click it, and all of your images will be renamed to include the prefix:
 
-![](assets/images/post_images/useful_batch_files/prefix_after.jpg)
+![](/assets/images/post_images/useful_batch_files/prefix_after.jpg)
 
 If you've got a large number of images this might take a few seconds - but it's still MUCH faster than doing it manually!
 
@@ -63,7 +63,7 @@ After it's done, it's a good idea to **delete the batch file** as if you acciden
 
 I recently encountered a situation in which images from different camera trap sites had been placed in the same folder - this resulted in many of the images being appended with a space followed by a bracketed number, for example:
 
-![](assets/images/post_images/useful_batch_files/before.jpg)
+![](/assets/images/post_images/useful_batch_files/before.jpg)
 
 I wanted to get rid of the space and bracketed number, so that e.g. `IMG_0001 (3).jpg` would become `IMG_0001.jpg`
 
@@ -83,4 +83,4 @@ We run this in the same way as for the prefix batch file above - check that sect
 
 Here is the result:
 
-![](assets/images/post_images/useful_batch_files/after.jpg)
+![](/assets/images/post_images/useful_batch_files/after.jpg)
