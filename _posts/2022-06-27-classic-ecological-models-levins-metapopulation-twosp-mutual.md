@@ -28,7 +28,6 @@ I'm mainly writing this post because a) it's fun and b) it helps me to learn mor
 Please bear in mind that there might be mistakes lurking in this post - if you spot any, I'd appreciate if you let me know via email (my address is in the sidebar) or in the comments below. As usual, use of the model etc. is at your own risk.
 
 ## Introducing the models
-
 ### Levins' single-species metapopulation model
 
 Imagine a landscape where there are patches of habitat, each occupied by a population of a species. As some of these populations go extinct patches become empty, and empty patches are colonised by new populations which establish when individuals disperse in from occupied patches. We can study how the population of these populations - the **metapopulation** - rises and falls over time.
