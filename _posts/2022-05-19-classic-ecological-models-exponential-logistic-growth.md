@@ -71,7 +71,7 @@ library(deSolve)
 set.seed(555)
 ```
 
-We're going to start off by simulating the underlying exponential growth process. The first thing to do is to define a function which takes in values for the intial state `y0` and rate of change `r`, and spits out the true value of our population over time:
+We're going to start off by simulating the underlying exponential growth process. The first thing to do is to define a function which takes in values for the intial state `y0` and rate of change `r`, and spits out the derivative `dn.dt` for each time step:
 
 ```r
 exp_growth <- function(times,y,parms){
