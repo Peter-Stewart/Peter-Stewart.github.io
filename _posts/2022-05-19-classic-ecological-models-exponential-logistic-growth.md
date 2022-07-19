@@ -420,7 +420,7 @@ Now we can code the model in Stan. Here is the full model:
 
 ```r
 functions{
-  vector exp_growth(real t,
+  vector logistic_growth(real t,
                     vector y,
                     real r,
                     real K){
@@ -443,7 +443,7 @@ parameters {
 }
 transformed parameters{
     // ODE solver
-  vector[1] lambda[n_times] = ode_rk45(exp_growth, y0, t0, ts, r, K);
+  vector[1] lambda[n_times] = ode_rk45(logistic_growth, y0, t0, ts, r, K);
 }
 model {
   // Priors
