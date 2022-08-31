@@ -174,11 +174,11 @@ We can plot the observed data on top of our true state lines from above like thi
 ```r
 par(mfrow=c(1,3))
 plot(X ~ time, data=state_true, type="l", ylim=c(0,1), ylab="Proportion of patches", main="Empty")
-points(x = time, y=counts_true[,1]/n_sites)
+points(x = time, y=counts_obs[,1]/n_sites)
 plot(Y ~ time, data=state_true, type="l", ylim=c(0,1), ylab="Proportion of patches", main="Plant only")
-points(x = time, y=counts_true[,2]/n_sites)
+points(x = time, y=counts_obs[,2]/n_sites)
 plot(Z ~ time, data=state_true, type="l", ylim=c(0,1), ylab="Proportion of patches", main="Plant & Disperser")
-points(x = time, y=counts_true[,3]/n_sites)
+points(x = time, y=counts_obs[,3]/n_sites)
 par(mfrow=c(1,1))
 ```
 
