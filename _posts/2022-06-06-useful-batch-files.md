@@ -1,5 +1,5 @@
 ---
-title: "Renaming camera trap images using Windows batch files"
+title: "Processing camera trap images using Windows batch files"
 date: 2022-06-06
 categories:
   - blog
@@ -8,13 +8,13 @@ tags:
   - tutorial
 ---
 
-In this post, I explain how to add a prefix to and remove a suffix from multiple camera trap images using Windows batch files.
+In this post, I explain how to use Windows batch files to add a prefix to, remove a suffix from, and copy a list of multiple camera trap images.
 
 ## Introduction
 
 When working with hundreds of thousands of camera trap images, even simple things like renaming images can suddenly become a daunting task!
 
-I encounter this situation pretty often during [my research](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya), so I make use of Windows batch files to rename large numbers of images at once. In this post, I share how to do this.
+I encounter these situations pretty often during [my research](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya), so I make use of Windows batch files to deal with large numbers of images at once. In this post, I share how to do this.
 
 Please note that **this will only work if you're on Windows**!
 
@@ -84,3 +84,39 @@ We run this in the same way as for the prefix batch file above - check that sect
 Here is the result:
 
 ![](/assets/images/post_images/useful_batch_files/after.jpg)
+
+## Copying a list of images ##
+
+Another common situation is having to copy a large number of specific images and put them into a single folder - for instance, I might want to go through my whole camera trap catalogue and copy all of the images meeting some criterion (e.g., images containing striped hyenas) into one folder.
+
+For example, here we have a folder called `site_photos` containing 2218 camera trap images from three sites:
+
+![](/assets/images/post_images/useful_batch_files/site_list.jpg)
+
+Within each site's folder, we have subfolders ending in `_part1`, `_part2`, etc.:
+
+![](/assets/images/post_images/useful_batch_files/subfolder_list.jpg)
+
+The first thing we need is a `.txt` file containing a list of images that we want to copy. I've called mine `image_list.txt`. The list should look like this:
+
+![](/assets/images/post_images/useful_batch_files/image_list.jpg)
+
+Notice that I've included the folder and subfolder in the file name - you'll need to do this, or else the images won't copy. There are a variety of ways of making a list like this - you could make it in R, or make it from a .csv by going to save as and selecting `.txt` in the drop-down list. You could even type it out manually if you only need to copy a few files.
+
+We are now going to copy all of the files in this list into a folder called `interesting_images`. We can do this using the following batch file:
+
+```batch
+set src_folder=C:\temp\blog_post\site_photos
+set dst_folder=C:\temp\blog_post\interesting_images
+for /f "tokens=*" %%i in (image_list.txt) DO (
+    xcopy /S/E "%src_folder%\%%i" "%dst_folder%"
+)
+```
+
+I saved this file as `copy_list`, and ran it in the same way as the other batch files above (see the *adding a common prefix* example for step-by-step instructions):
+
+![](/assets/images/post_images/useful_batch_files/copy_list.jpg)
+
+If we go to the `interesting_images` folder, we can see that all of the images in our list are there:
+
+![](/assets/images/post_images/useful_batch_files/interesting_images.jpg)
