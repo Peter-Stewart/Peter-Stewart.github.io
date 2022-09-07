@@ -113,6 +113,8 @@ for /f "tokens=*" %%i in (image_list.txt) DO (
 )
 ```
 
+Note that you have to specify the source folder (`src_folder`, which is `site_photos`) and destination folder (`dst_folder`, which is `interesting_images`) so that the files are copied from and to the correct places.
+
 I saved this file as `copy_list`, and ran it in the same way as the other batch files above (see the *adding a common prefix* example for step-by-step instructions):
 
 ![](/assets/images/post_images/useful_batch_files/copy_list.jpg)
