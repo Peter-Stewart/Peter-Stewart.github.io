@@ -12,7 +12,7 @@ intro:
   - image_path: /assets/images/bio-pic-web.jpg
     excerpt: 'I am an **ecologist and conservationist** interested in the interface between ecology, animal behaviour, and the human dimensions of conservation. 
     <br /><br />
-    I am currently undertaking my PhD with the Conservation Ecology Group at Durham University, supervised by Dr. Wayne Dawson, on the **impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya.** As part of this project I manage [Prickly Pear Project Kenya](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya) on Zooniverse.'
+    I am currently undertaking my PhD with the [Durham Invasion Science Lab](https://durhaminvasionscience.org/), part of the [Conservation Ecology Group](http://www.conservationecology.org/) at Durham University, on the **impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya.**. As part of this project I manage [Prickly Pear Project Kenya](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya) on Zooniverse.'
 feature_row1:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/872ae3c1-6824-4328-a199-9fab69aeb9dd.jpeg
     alt: ""
