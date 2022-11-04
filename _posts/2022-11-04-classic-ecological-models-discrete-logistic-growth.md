@@ -77,13 +77,13 @@ Nt <- logistic_growth(r = r,
 plot(1:generations ,Nt, type = "o", pch = 16, ylim = c(0, 1), xlab = "Time", ylab = "N")
 ```
 
-![](file://C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Classic_ecological_models\Discrete_logistic_growth\images\simple_example.jpeg?msec=1667492043309)
+![](/assets/images/post_images/discrete_logistic_growth/simple_example.jpeg?msec=1667492043309)
 
 Ok, so this isn't very interesting - the population rapidly climbs from its initial state to an equilibrium at 0.5, and then stays there.
 
 The really interesting stuff starts to happen when we increase the value of $r$ - for example, when $r = 3.9$ our plot starts to look like this:
 
-![](file://C:\Users\PeteS\OneDrive\R%20Scripts%20Library\Blog\Classic_ecological_models\Discrete_logistic_growth\images\simple_example2.jpeg?msec=1667492086466)
+![](/assets/images/post_images/discrete_logistic_growth/simple_example2.jpeg?msec=1667492086466)
 
 The population appears to be fluctuating chaotically - we can see oscillations as well as more stable periods, and there is no obvious pattern to the changes.
 
