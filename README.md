@@ -47,3 +47,5 @@ feature_row3:
 {% include feature_row id="feature_row1" %}
 {% include feature_row id="feature_row2" %}
 {% include feature_row id="feature_row3" %}
+
+<a rel="me" href="https://ecoevo.social/@Peter_S_Stewart">Mastodon</a>
