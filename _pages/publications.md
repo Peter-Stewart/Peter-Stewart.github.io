@@ -3,8 +3,8 @@ permalink: /publications/
 title: "Publications"
 ---
 
-## Preprints ##
-**Stewart, P.S.**, Stephens, P.A., Hill, R.A., Whittingham, M.J. & Dawson, W. (2022). Model selection in occupancy models: inference versus prediction. *BioRxiv*. DOI: https://doi.org/10.1101/2022.03.01.482466 
+## Accepted ##
+**Stewart, P.S.**, Stephens, P.A., Hill, R.A., Whittingham, M.J. & Dawson, W. (2022). Model selection in occupancy models: inference versus prediction. *Ecology*. DOI: https://doi.org/10.1002/ecy.3942
 
 ## 2022 ##
 Wells, H.B.M, Crego, R.D., Alston, J.M., Ndung'u, K., Khasoha, L.M., Reed, C.G., Hassan, A.A., Kurukura, S., Ekadeli, J., Namoni, M., **Stewart, P.S.**, Kimuyu, D.M., Wolf, A.A., Young, T.P., Kartzinel, T.R., Palmer, T.M., Goheen, J.R. & Pringle, R.M. (2022). Wild herbivores enhance resistance to invasion by exotic cacti in an African savanna. *Journal of Ecology*. DOI: https://doi.org/10.1111/1365-2745.14010
