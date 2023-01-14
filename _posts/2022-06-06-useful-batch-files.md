@@ -129,9 +129,9 @@ This one is useful for any [Timelapse](https://saul.cpsc.ucalgary.ca/timelapse/p
 
 As above, we have a folder called `site_photos` containing camera trap images from 3 sites, with each site split into parts like so:
 
-![](/assets/images/post_images/useful_batch_files/site_list.png)
+![](/assets/images/post_images/useful_batch_files/site_list.jpg)
 
-![](/assets/images/post_images/useful_batch_files/subfolder_list.png)
+![](/assets/images/post_images/useful_batch_files/subfolder_list.jpg)
 
 In the top-level folder (which I've called `copy_to_subfolders_batch_test` for this example) we also have a file called `TimelapseTemplate.tdb` - this is the file that we want to copy to all the subfolders.
 
