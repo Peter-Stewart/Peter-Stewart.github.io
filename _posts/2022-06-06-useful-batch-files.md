@@ -8,7 +8,7 @@ tags:
   - tutorial
 ---
 
-In this post, I explain how to use Windows batch files to add a prefix to, remove a suffix from, and copy a list of multiple camera trap images.
+In this post, I explain how to use Windows batch files to perform several useful operations on camera trap images - for example adding a prefix to, removing a suffix from, or copying a list of multiple camera trap images.
 
 ## Introduction
 
@@ -122,3 +122,28 @@ I saved this file as `copy_list`, and ran it in the same way as the other batch 
 If we go to the `interesting_images` folder, we can see that all of the images in our list are there:
 
 ![](/assets/images/post_images/useful_batch_files/interesting_images.jpg)
+
+## Copying one file to all subfolders ##
+
+This one is useful for any [Timelapse](https://saul.cpsc.ucalgary.ca/timelapse/pmwiki.php?n=Main.Download2) users out there - it's a quick method for getting your Timelapse template file into all of your image subfolders so that you can load each of them into Timelapse separately.
+
+As above, we have a folder called `site_photos` containing camera trap images from 3 sites, with each site split into parts like so:
+
+![](/assets/images/post_images/useful_batch_files/site_list.png)
+
+![](/assets/images/post_images/useful_batch_files/subfolder_list.png)
+
+In the top-level folder (which I've called `copy_to_subfolders_batch_test` for this example) we also have a file called `TimelapseTemplate.tdb` - this is the file that we want to copy to all the subfolders.
+
+To do this, we can use the following batch file:
+
+```batch
+cd "C:\temp\copy_to_subfolders_batch_test\site_photos"
+for /r /d %%I in (*) do xcopy "C:\temp\copy_to_subfolders_batch_test\TimelapseTemplate.tdb" "%%~fsI"
+```
+
+You'll need to change the folder path and file name as appropriate, and then save and run the batch file as above (see the *adding a common prefix* example for step-by-step instructions).
+
+When you look in the subfolders, you'll see that the batch file is there:
+
+![](/assets/images/post_images/useful_batch_files/copy_sub_results.jpg)
