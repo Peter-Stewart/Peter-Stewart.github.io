@@ -59,6 +59,39 @@ If you've got a large number of images this might take a few seconds - but it's 
 
 After it's done, it's a good idea to **delete the batch file** as if you accidentally double-click it again, it's going to add an unwanted second prefix to your images!
 
+## Adding the folder name as a common prefix - recursive version
+
+If you've got camera trap images spread across a large number of folders (e.g., representing many sites) then prefixing them using the previous approach can be quite tedious, as you have to edit an run the batch file for each folder individually.
+
+However, if the prefix you want to add is the same as the name of the folder that each image is in (e.g., you want to make every image in the folder `Site_01_part1` look like `Site_01_part1_IMG0001.jpg`) there is a much easier method - we write a single batch file which goes through all of our folders, and adds the folder name as a prefix to every image file in each folder.
+
+We can do this using the following batch file:
+
+```batch
+setlocal enabledelayedexpansion
+FOR /F "tokens=* delims=" %%F in ('dir /s /b /a-d *.jpg') DO (
+    set "DIRPATH=%%~dpF"
+    set "FILEPATH=%%~F"
+    set "FILENAME=%%~nxF"
+    IF "!DIRPATH:~-1!" EQU "\" (
+        SET "DIRPATH=!DIRPATH:~0,-1!"
+    )
+
+    FOR %%G IN ("!DIRPATH!") DO (
+        set "PICDIR=%%~nxG"
+        rename "!FILEPATH!" "!PICDIR!_!FILENAME!"
+    )
+)
+```
+
+Note that I've set this up so that it'll only work on `.jpg` files (which all of my camera trap images are) - if you want it to work on another file type (e.g., `.png` images) you'll need to alter the `*.jpg` bit on the second line.
+
+We save the batch file (see above for step-by-step instructions) in the same folder as all of the folders we want it to look through - in this example, we want it to look through `Site_43`, `Site_44`, and `Site_74` as well as all of the subfolders within each (`Site_43_part1`, `Site_43_part2` etc.).
+
+![](/assets/images/post_images/useful_batch_files/prefix_recursive.jpg)
+
+Running the batch file will result in all of the camera trap images being renamed to add their respective prefix.
+
 ## Removing a bracketed number
 
 I recently encountered a situation in which images from different camera trap sites had been placed in the same folder - this resulted in many of the images being appended with a space followed by a bracketed number, for example:
