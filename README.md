@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 hidden: true
 header:
-  overlay_image: /assets/images/forest1.jpg
+  overlay_image: /assets/images/header_resized.jpg
   actions:
     - label: "Publications"
       url: "https://peter-stewart.github.io/publications/"
