@@ -12,7 +12,7 @@ intro:
   - image_path: /assets/images/bio-pic-web.jpg
     excerpt: 'I am an **ecologist and conservationist** interested in the interface between ecology, animal behaviour, and the human dimensions of conservation. 
     <br /><br />
-    I am currently a postdoctoral research fellow at the University of Stirling, working on modelling the distribution of invasive tree pests and diseases in the UK.
+    I am currently a **postdoctoral research fellow at the University of Stirling**, working on modelling the distribution of invasive tree pests and diseases in the UK.
  <br /><br />
 Previously, I undertook my PhD with the [Durham Invasion Science Lab](https://durhaminvasionscience.org/) and the [Conservation Ecology Group](http://www.conservationecology.org/) at Durham University, on the impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya. As part of this project I manage [Prickly Pear Project Kenya](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya) on Zooniverse.'
 feature_row1:
