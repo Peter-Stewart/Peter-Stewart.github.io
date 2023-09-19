@@ -3,7 +3,7 @@ permalink: /research/
 title: "Research"
 ---
 
-My research addresses key problems related to **global change**, using a combination of advanced quantitative methods and field-based approaches. Currently, my research is mainly focused on **biological invasions** and **climate change**.
+My research addresses key problems related to **global change**, using a combination of advanced quantitative methods and field-based approaches. Currently, my research is mainly focused on **biological invasions**.
 
 Specific questions I have been working on include:
 
