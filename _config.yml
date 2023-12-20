@@ -16,7 +16,7 @@
 title: Peter S. Stewart
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  PhD Student: Ecology and Conservation
+  Postdoctoral Research Fellow: Ecology and Conservation
 twitter_username: Peter_S_Stewart
 github_username: Peter-Stewart
 minimal_mistakes_skin: default
@@ -58,7 +58,7 @@ plugins:
 author:
   name   : "Peter S. Stewart"
   avatar : "/assets/images/bio-pic-web.jpg"
-  bio    : "PhD Student in the Conservation Ecology Group, Durham University"
+  bio    : "Postdoctoral Research Fellow, University of Stirling"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
