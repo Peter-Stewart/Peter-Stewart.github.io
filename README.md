@@ -14,7 +14,7 @@ intro:
     <br /><br />
     I am currently a **postdoctoral research fellow at the University of Stirling**, working on modelling the distribution of invasive tree pests and diseases in the UK.
  <br /><br />
-Previously, I undertook my PhD with the [Durham Invasion Science Lab](https://durhaminvasionscience.org/) and the [Conservation Ecology Group](http://www.conservationecology.org/) at Durham University, on the impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya. As part of this project I manage [Prickly Pear Project Kenya](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya) on Zooniverse.'
+Previously, I undertook my PhD with the [Durham Invasion Science Lab](https://durhaminvasionscience.org/) and the [Conservation Ecology Group](http://www.conservationecology.org/) at Durham University, on the impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya. As part of this project I created and managed [Prickly Pear Project Kenya](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya) on Zooniverse.'
 feature_row1:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/872ae3c1-6824-4328-a199-9fab69aeb9dd.jpeg
     alt: ""
