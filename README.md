@@ -12,9 +12,11 @@ intro:
   - image_path: /assets/images/bio-pic-web.jpg
     excerpt: 'I am an **ecologist and conservationist** interested in the interface between ecology, animal behaviour, and the human dimensions of conservation. 
     <br /><br />
-    I am currently a **postdoctoral research fellow at the University of Stirling**, working on modelling the distribution of invasive tree pests and diseases in the UK.
+    I am currently a **postdoctoral research fellow in the [Computational Movement Ecology Group](https://www.maths.gla.ac.uk/~ctorney/) at the University of Glasgow**, studying the effects of antropogenic disturbance on the behaviour and population dynamics of migratory wildebeest in the Serengeti.
  <br /><br />
-Previously, I undertook my PhD with the [Durham Invasion Science Lab](https://durhaminvasionscience.org/) and the [Conservation Ecology Group](http://www.conservationecology.org/) at Durham University, on the impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya. As part of this project I created [Prickly Pear Project Kenya](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya) on Zooniverse.'
+Previously, I was a postdoctoral research fellow at the University of Stirling, modelling the spatial patterns and drivers of tree pest and disease occurrence in UK forests.
+
+I undertook my PhD with the [Durham Invasion Science Lab](https://durhaminvasionscience.org/) and the [Conservation Ecology Group](http://www.conservationecology.org/) at Durham University, on the impacts of invasive prickly pear cacti *(Opuntia sp.)* in Laikipia County, Kenya. As part of this project I created [Prickly Pear Project Kenya](https://www.zooniverse.org/projects/peter-dot-stewart/prickly-pear-project-kenya) on Zooniverse.'
 feature_row1:
   - image_path: https://panoptes-uploads.zooniverse.org/subject_location/872ae3c1-6824-4328-a199-9fab69aeb9dd.jpeg
     alt: ""
