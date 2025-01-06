@@ -16,7 +16,7 @@
 title: Peter S. Stewart
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Postdoctoral Research Fellow: Ecology and Conservation
+  Quantitative Ecology and Conservation
 twitter_username: Peter_S_Stewart
 github_username: Peter-Stewart
 minimal_mistakes_skin: default
@@ -58,11 +58,11 @@ plugins:
 author:
   name   : "Peter S. Stewart"
   avatar : "/assets/images/bio-pic-web.jpg"
-  bio    : "Postdoctoral Research Fellow, University of Stirling"
+  bio    : "Research Associate in Mathematical Ecology, University of Glasgow"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:ps67@stir.ac.uk"
+      url: "mailto:peter.s.stewart@glasgow.ac.uk"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/Peter_S_Stewart"
@@ -80,7 +80,7 @@ footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:ps67@stir.ac.uk"
+      url: "mailto:peter.s.stewart@glasgow.ac.uk"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/Peter_S_Stewart"
