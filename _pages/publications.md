@@ -3,8 +3,8 @@ permalink: /publications/
 title: "Publications"
 ---
 
-## In press ## 
-**Stewart, P.S.**,  Hill, R.A., Oduor, A.M.O.,  Stephens, P.A., Whittingham, M.J. & Dawson, W. (2024). Multi-species impacts of invasive _Opuntia_ cacti on mammal habitat use. _Ecology Letters_ 
+## 2025 ## 
+**Stewart, P.S.**,  Hill, R.A., Oduor, A.M.O.,  Stephens, P.A., Whittingham, M.J. & Dawson, W. (2024). Multi-species impacts of invasive _Opuntia_ cacti on mammal habitat use. *Ecology Letters*. 28, e70163. DOI: https://doi.org/10.1111/ele.70163
 
 ## 2023 ##
 **Stewart, P.S.**, Stephens, P.A., Hill, R.A., Whittingham, M.J. & Dawson, W. (2023). Model selection in occupancy models: inference versus prediction. *Ecology*. 104, e3942. DOI: https://doi.org/10.1002/ecy.3942
