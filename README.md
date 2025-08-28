@@ -7,12 +7,12 @@ header:
   actions:
     - label: "Publications"
       url: "https://peter-stewart.github.io/publications/"
-excerpt: "Postdoctoral Research Fellow: Ecology and Conservation"
+excerpt: "Research Associate in Mathematical Ecology"
 intro:
   - image_path: /assets/images/bio-pic-web.jpg
     excerpt: 'I am an **ecologist and conservationist** interested in the interface between ecology, animal behaviour, and the human dimensions of conservation. 
     <br /><br />
-    I am currently a **postdoctoral research fellow in the [Computational Movement Ecology Group](https://www.maths.gla.ac.uk/~ctorney/) at the University of Glasgow**, studying the effects of anthropogenic disturbance on the behaviour and population dynamics of migratory wildebeest in the Serengeti.
+    I am currently a **research associate in mathematical ecology in the [Computational Movement Ecology Group](https://www.maths.gla.ac.uk/~ctorney/) at the University of Glasgow**, studying the effects of anthropogenic disturbance on the behaviour and population dynamics of migratory wildebeest in the Serengeti.
  <br /><br />
 Previously, I was a postdoctoral research fellow at the University of Stirling, modelling the spatial patterns and drivers of tree pest and disease occurrence in UK forests.
 
