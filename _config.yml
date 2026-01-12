@@ -17,7 +17,7 @@ title: Peter S. Stewart
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Quantitative Ecology and Conservation
-twitter_username: Peter_S_Stewart
+#twitter_username: Peter_S_Stewart
 github_username: Peter-Stewart
 minimal_mistakes_skin: default
 search: true
@@ -63,12 +63,12 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:peter.s.stewart@glasgow.ac.uk"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/Peter_S_Stewart"
-    - label: "Mastodon"
-      icon: "fab fa-fw fa-mastodon"
-      url: "https://ecoevo.social/web/@Peter_S_Stewart"
+    #- label: "Twitter"
+    #  icon: "fab fa-fw fa-twitter-square"
+    #  url: "https://twitter.com/Peter_S_Stewart"
+    #- label: "Mastodon"
+    #  icon: "fab fa-fw fa-mastodon"
+    #  url: "https://ecoevo.social/web/@Peter_S_Stewart"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Peter-Stewart"
@@ -81,12 +81,12 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:peter.s.stewart@glasgow.ac.uk"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/Peter_S_Stewart"
-    - label: "Mastodon"
-      icon: "fab fa-fw fa-mastodon"
-      url: "https://ecoevo.social/web/@Peter_S_Stewart"
+    #- label: "Twitter"
+    #  icon: "fab fa-fw fa-twitter-square"
+    #  url: "https://twitter.com/Peter_S_Stewart"
+    #- label: "Mastodon"
+    #  icon: "fab fa-fw fa-mastodon"
+    #  url: "https://ecoevo.social/web/@Peter_S_Stewart"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Peter-Stewart"
