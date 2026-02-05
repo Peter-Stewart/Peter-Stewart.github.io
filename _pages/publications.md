@@ -8,6 +8,8 @@ title: "Publications"
 ## 2025 ## 
 **Stewart, P.S.**,  Hill, R.A., Oduor, A.M.O.,  Stephens, P.A., Whittingham, M.J. & Dawson, W. (2025). Multi-species impacts of invasive _Opuntia_ cacti on mammal habitat use. *Ecology Letters*. 28, e70163. DOI: <https://doi.org/10.1111/ele.70163>
 
+Hockerts, L., **Stewart, P.S.** & Vlaar, T. (2025) Camera-trap classification with deep learning under ground truth uncertainty. *Tackling Climate Change with Machine Learning Workshop (NeurIPS 2025)*.
+
 ## 2023 ##
 **Stewart, P.S.**, Stephens, P.A., Hill, R.A., Whittingham, M.J. & Dawson, W. (2023). Model selection in occupancy models: inference versus prediction. *Ecology*. 104, e3942. DOI: <https://doi.org/10.1002/ecy.3942>
 
