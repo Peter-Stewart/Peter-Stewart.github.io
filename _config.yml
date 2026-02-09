@@ -75,7 +75,9 @@ author:
     - label: "Google Scholar"
       icon: "fab fa-fw fa-google-scholar"
       url: "https://scholar.google.com/citations?user=bCXlfOMAAAAJ&hl=en"
-
+    - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate"
+      url: "https://www.researchgate.net/profile/Peter-Stewart-16?ev=prf_overview"
 header:
   image: /assets/images/header_resized.jpg
 
@@ -93,6 +95,12 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Peter-Stewart"
+    - label: "Google Scholar"
+      icon: "fab fa-fw fa-google-scholar"
+      url: "https://scholar.google.com/citations?user=bCXlfOMAAAAJ&hl=en"
+    - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate"
+      url: "https://www.researchgate.net/profile/Peter-Stewart-16?ev=prf_overview"
 
 comments:
   provider: "disqus"
