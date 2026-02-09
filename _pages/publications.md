@@ -2,8 +2,8 @@
 permalink: /publications/
 title: "Publications"
 ---
-## In press ##
-**Stewart, P.S.**, Barwell, L.J., Turvey, K., Barbrook, J., Green, S., Pérez-Sierra, A., Purse, B.V. & Chapman, D. (in press). Patterns and drivers of pest and disease occurrence in UK treescapes. *Global Change Biology*. 
+## 2026 ##
+**Stewart, P.S.**, Barwell, L.J., Turvey, K., Barbrook, J., Green, S., Pérez-Sierra, A., Purse, B.V. & Chapman, D. (in press). Patterns and drivers of pest and disease occurrence in UK treescapes. *Global Change Biology*. 32, e70706. DOI: <https://doi.org/10.1111/gcb.70706>
 
 ## 2025 ## 
 **Stewart, P.S.**,  Hill, R.A., Oduor, A.M.O.,  Stephens, P.A., Whittingham, M.J. & Dawson, W. (2025). Multi-species impacts of invasive _Opuntia_ cacti on mammal habitat use. *Ecology Letters*. 28, e70163. DOI: <https://doi.org/10.1111/ele.70163>
