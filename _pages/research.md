@@ -3,11 +3,11 @@ permalink: /research/
 title: "Research"
 ---
 
-My research addresses key problems related to **global change**, using a combination of advanced quantitative methods and field-based approaches.
+My research addresses a range of key problems in the field of conservation ecology, using a combination of advanced quantitative methods and field-based approaches.
 
 Specific questions I have been working on include:
 
-1. **How does anthropogenic disturbance affect the behaviour and population dynamics of migratory wildebeest in the Serengeti?** Human activities can affect wildlife populations through both direct mortality (e.g., hunting) and a number of indirect pathways (e.g., by modifying foraging and movement behaviour). As part of the Serengeti Wildebeest Project at the University of Glasgow, I have been working on mechanistically linking anthropogenic disturbance to wildebeest behaviour and population dynamics. 
+1. **How does anthropogenic disturbance affect the population dynamics of migratory wildebeest in the Serengeti?** Human activities can affect wildlife populations through both direct mortality (e.g., hunting) and a number of indirect pathways (e.g., by modifying foraging and movement behaviour). As part of the Serengeti Wildebeest Project at the University of Glasgow, I have been working on mechanistically linking anthropogenic disturbance to wildebeest population dynamics. 
 
 2. **What are the distributions of invasive tree pests and diseases in the UK, and what factors drive these distributions?** Invasive tree pests and diseases - such as ash dieback, *Phyotophthora*, and the great spruce bark beetle - are [a serious threat to natural woodland and commercial forestry in the UK](https://post.parliament.uk/research-briefings/post-pn-394/). During my time at Stirling University, I worked on modelling the distributions of pests and diseases for a range of ecologically and culturally significant host tree species. 
 
