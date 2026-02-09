@@ -72,6 +72,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Peter-Stewart"
+    - label: "Google Scholar"
+      icon: "fab fa-fw fa-google-scholar"
+      url: "https://scholar.google.com/citations?user=bCXlfOMAAAAJ&hl=en"
 
 header:
   image: /assets/images/header_resized.jpg
