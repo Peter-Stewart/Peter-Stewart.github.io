@@ -9,7 +9,7 @@ header:
       url: "https://peter-stewart.github.io/publications/"
 excerpt: "Research Associate in Mathematical Ecology"
 intro:
-  - image_path: /assets/images/bio-pic-web.jpg
+  - image_path: /assets/images/profile_photo_cropped2.jpg
     excerpt: 'I am an **ecologist and conservationist** interested in the interface between ecology, animal behaviour, and the human dimensions of conservation. 
     <br /><br />
     I am currently a **research associate in mathematical ecology at the University of Glasgow**, studying the effects of anthropogenic disturbance on the population dynamics of migratory wildebeest in the Serengeti.
